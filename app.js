@@ -13,11 +13,6 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cookieParser());
 app.use(express.json());
 
-let port = process.env.PORT;
-if (port == null || port == "") {
-  port = 3000;
-}
-
 // database connection
 const dbURI = "mongodb://localhost:27017/barangayOfficial73DB";
 mongoose
@@ -27,7 +22,7 @@ mongoose
     useFindAndModify: false,
     useCreateIndex: true,
   })
-  .then((result) => app.listen(port))
+  .then((result) => app.listen(3000))
   .catch((err) => console.log(err));
 
 // app.use(client);
