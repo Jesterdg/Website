@@ -32,7 +32,9 @@ mongoose
 
 app.use(client);
 app.use(admin);
-
+app.get("/", (req, res) => {
+  res.send("Hosting");
+});
 // 404 page
 app.use((req, res) => {
   res.status(404).render("404", { title: "404" });
