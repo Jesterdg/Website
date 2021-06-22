@@ -30,8 +30,8 @@ mongoose
   .then((result) => app.listen(port))
   .catch((err) => console.log(err));
 
-app.use(client);
-app.use(admin);
+// app.use(client);
+// app.use(admin);
 app.get("/", (req, res) => {
   res.send("Hosting");
 });
